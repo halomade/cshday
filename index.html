@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+/>
+
+<title>Cash</title>
+
+<script>
+/* ===== EDIT LINKS HERE ONLY ===== */
+const LINK_21PLUS   = "https://www.ch6rrl8trk.com/2GXK7W/5NWWWN/?sub1=main";
+const LINK_UNDER21  = "https://www.ch6rrl8trk.com/2GXK7W/8J38T9/?sub1=mainunder21";
+const PRIVACY_LINK  = "https://bestdls.com/b/csh/usa/test/48/privacy/";
+const TERMS_LINK    = "https://bestdls.com/b/csh/usa/test/48/terms/";
+/* =============================== */
+</script>
+
+<style>
+@font-face {
+  font-family: "Galano";
+  src: url("./fonts/GalanoGrotesqueRegular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Galano";
+  src: url("./fonts/GalanoGrotesqueBold.otf");
+  font-weight: 700;
+}
+
+:root{
+  --bg:#131524;
+  --card:#1c1e2d;
+  --green:#26ad70;
+  --grad1:#00d970;
+  --grad2:#01e0e8;
+  --white:#fefefd;
+  --g1:#87868e;
+  --g2:#d3d2d7;
+  --star:#fcbf26;
+  --important:#0e382e;
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:var(--bg);
+  font-family:Galano,system-ui;
+  color:var(--white);
+}
+
+.app{
+  max-width:430px;
+  height:100vh;
+  margin:0 auto;
+  padding:14px;
+  position:relative;
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.brand img{
+  width:34px;
+  height:34px;
+  border-radius:10px;
+}
+.brand span{
+  font-size:26px;
+  font-weight:700;
+}
+.users{
+  font-size:16px;
+  color:#9fa0aa;
+}
+.users b{color:var(--green)}
+
+.hero{
+  text-align:center;
+  margin-top:14px;
+}
+.hero h1{
+  font-size:40px;
+  line-height:1.05;
+  margin:18px 0 10px;
+  font-weight:700;
+}
+.hero .grad{
+  background:linear-gradient(90deg,var(--grad1),var(--grad2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  font-size:18px;
+  color:var(--g1);
+  margin-bottom:14px;
+}
+
+.earn{
+  background:rgba(255,255,255,.05);
+  border-radius:16px;
+  padding:12px 16px;
+  margin-bottom:14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+.earn span{
+  color:var(--g1);
+  font-size:16px;
+}
+.earn b{
+  font-size:28px;
+  font-weight:700;
+}
+.earn b i{
+  color:var(--green);
+  font-style:normal;
+}
+
+.content{
+  position:relative;
+  height:calc(100vh - 300px);
+  overflow:hidden;
+}
+
+.page{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transform:translateY(18px);
+  pointer-events:none;
+  transition:.4s cubic-bezier(.22,.61,.36,1);
+}
+.page.active{
+  opacity:1;
+  transform:none;
+  pointer-events:auto;
+}
+
+.title{
+  text-align:center;
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+.option{
+  background:var(--card);
+  border-radius:20px;
+  padding:16px;
+  margin-bottom:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+}
+.option h3{
+  margin:0 0 6px;
+  font-size:22px;
+}
+.option p{
+  margin:0;
+  font-size:16px;
+  color:var(--g1);
+}
+.option p b{color:var(--green)}
+
+.radio{
+  width:26px;
+  height:26px;
+  min-width:26px;
+  min-height:26px;
+  border-radius:50%;
+  border:2px solid #3a3c4f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.radio::after{
+  content:"";
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:transparent;
+}
+.option.selected .radio::after{
+  background:#d3d2d7;
+}
+
+.reviews{
+  text-align:center;
+  margin-top:12px;
+}
+.stars{color:var(--star)}
+.reviews span{
+  color:var(--g2);
+  font-weight:700;
+}
+.reviews small{
+  display:block;
+  margin-top:6px;
+  color:var(--g1);
+}
+
+.step{
+  background:var(--card);
+  border-radius:20px;
+  padding:14px;
+  margin-bottom:10px;
+  display:flex;
+  gap:14px;
+}
+.step.highlight{
+  outline:2px solid rgba(38,173,112,.35);
+}
+.num{
+  width:44px;
+  height:44px;
+  min-width:44px;
+  border-radius:50%;
+  background:var(--green);
+  color:#0b1512;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+.step h3{
+  margin:0 0 6px;
+  font-size:22px;
+}
+.step p{
+  margin:0;
+  color:var(--g1);
+}
+.badge{
+  display:inline-block;
+  margin-top:6px;
+  padding:6px 12px;
+  border-radius:10px;
+  background:var(--important);
+  color:var(--green);
+  font-size:12px;
+  font-weight:700;
+}
+
+.cta{
+  margin-top:8px;
+  width:100%;
+  border:none;
+  border-radius:22px;
+  padding:16px;
+  background:#2ecc71;
+  color:#ffffff;
+  font-size:24px;
+  font-weight:700;
+  font-family:Galano;
+}
+
+#p2{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  padding-top:0px;
+  padding-left:2px;
+  padding-right:2px;
+  padding-bottom:calc(env(safe-area-inset-bottom) + 14px);
+}
+
+@media (max-height: 760px){
+  #p2{ padding-bottom:calc(env(safe-area-inset-bottom) + 40px); }
+  #p2 .step{ padding:12px; margin-bottom:8px; }
+  #p2 .step h3{ font-size:20px; }
+  #p2 .cta{ padding:14px; font-size:22px; margin-bottom:10px; }
+}
+
+/* ✅ FIXED LEGAL LINKS (CANNOT BE CLIPPED) */
+.legal-footer{
+  position:fixed;
+  bottom:6px;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:12px;
+  z-index:9999;
+}
+.legal-footer a{
+  color:#7b7c86;
+  text-decoration:underline; /* ✅ always underlined */
+  margin:0 10px;
+}
+.legal-footer a:hover{
+  text-decoration:underline;
+}
+.legal-hidden{
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="top">
+    <div class="brand">
+      <img src="./assets/green.png">
+      <span>FreeCash</span>
+    </div>
+    <div class="users"><b>1.3m+</b> users</div>
+  </div>
+
+  <div class="hero">
+    <h1>Get paid to<br><span class="grad">watch videos</span></h1>
+    <p>Turn your screen time into cash.</p>
+    <div class="earn">
+      <span>Earn up to</span>
+      <b><i>$</i>2,000/week</b>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="page active" id="p1">
+      <div class="title">How old are you?</div>
+
+      <div class="option" onclick="selectAge(true,this)">
+        <div>
+          <h3>I’m 21 or older</h3>
+          <p><b>Instant payouts:</b> PayPal, Crypto, Bank Transfer & more</p>
+        </div>
+        <div class="radio"></div>
+      </div>
+
+      <div class="option" onclick="selectAge(false,this)">
+        <div>
+          <h3>I’m under 21</h3>
+          <p>Limited & lower payouts</p>
+        </div>
+        <div class="radio"></div>
+      </div>
+
+      <div class="reviews">
+        <div class="stars">★★★★★</div>
+        <span>4.8 · 251k reviews</span>
+        <small>PayPal · Crypto · Bank · Gift Cards</small>
+      </div>
+    </div>
+
+    <div class="page" id="p2">
+
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <h3>Create your account</h3>
+          <p>Get <b>$5 instantly</b> just for signing up</p>
+        </div>
+      </div>
+
+      <div class="step highlight">
+        <div class="num">2</div>
+        <div>
+          <h3>Unlock the TikTok offer</h3>
+          <p>Complete <b>1 offer</b> to unlock</p>
+          <div class="badge">IMPORTANT</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3>Get paid</h3>
+          <p>PayPal, crypto, bank, or gift cards</p>
+        </div>
+      </div>
+
+      <button class="cta" onclick="go()">Start Earning</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ✅ SHOWS ON PAGE 1 ONLY -->
+<div class="legal-footer" id="legalFooter">
+  <a href="#" onclick="location.href=PRIVACY_LINK; return false;">Privacy Policy</a>
+  <a href="#" onclick="location.href=TERMS_LINK; return false;">Terms of Service</a>
+</div>
+
+<script>
+let is21 = null;
+let hasClicked = false; // ✅ prevents duplicate outbound clicks
+
+// ✅ add explicit refs (does NOT change layout/behavior)
+const p1El = document.getElementById("p1");
+const p2El = document.getElementById("p2");
+const legalFooterEl = document.getElementById("legalFooter");
+
+// ✅ set initial history state so "Back" on page 2 returns to page 1 (not Amazon)
+try {
+  history.replaceState({ step: 1 }, "", location.href);
+} catch(e){}
+
+function selectAge(v,el){
+  document.querySelectorAll(".option").forEach(o=>o.classList.remove("selected"));
+  el.classList.add("selected");
+  is21=v;
+
+  // ✅ push state ONLY when moving to step 2
+  try {
+    history.pushState({ step: 2 }, "", "#step2");
+  } catch(e){}
+
+  // ✅ hide legal footer on second page (existing behavior)
+  if (legalFooterEl) legalFooterEl.classList.add("legal-hidden");
+
+  setTimeout(()=>{
+    p1El.classList.remove("active");
+    p2El.classList.add("active");
+  },180);
+}
+
+// ✅ smooth reverse animation back to page 1
+function backToStep1(){
+  // reset selection so user can re-pick cleanly
+  document.querySelectorAll(".option").forEach(o=>o.classList.remove("selected"));
+  is21 = null;
+
+  // show page 1 + hide page 2 (same transition system, reversed)
+  p2El.classList.remove("active");
+  p1El.classList.add("active");
+
+  // show footer again on page 1
+  if (legalFooterEl) legalFooterEl.classList.remove("legal-hidden");
+}
+
+// ✅ intercept browser back button ONLY when on step 2
+window.addEventListener("popstate", function(){
+  if (p2El.classList.contains("active")) {
+    backToStep1();
+  }
+});
+
+function go(){
+  if (hasClicked) return;  // ✅ blocks duplicate clicks
+  hasClicked = true;
+  location.href = is21 ? LINK_21PLUS : LINK_UNDER21;
+}
+</script>
+
+</body>
+</html>
